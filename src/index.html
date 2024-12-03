@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/app.css">
+  <link rel="icon" href="img_source/Logodepagina/logo4.jpg" type="image/x-icon">
+  <title>Boostly Marketing</title>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <!-- Sidebar para dispositivos móviles -->
+        <ul class="sidebar">
+            <!-- Botón para cerrar el sidebar -->
+            <li onclick="hidesidebar()">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="40px" fill="#ffffff">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </li>
+            <!-- Elementos del menú del sidebar -->
+            <li><a href="index.html">Inicio</a></li> 
+            <li><a href="servicios.html">Servicios</a></li> 
+            <li><a href="#">Nosotros</a></li> 
+            <li><a href="contacto.html">Contacto</a></li> 
+           
+        </ul>
+        
+        <!-- Menú de navegación principal -->
+        <div class="nav-menu">
+            <a class="title text-lg text-white font-bold" href="index.html"><img src="img_source/Logodepagina/logo3-nobg.png" width="100px" > Boostly Marketing</a>
+            <ul>
+                <!-- Elementos del menú principal (ocultos en móvil) -->
+                <li class="hiddenmobil"><a href="index.html">Inicio</a></li> 
+                <li class="hiddenmobil"><a href="servicios.html">Servicios</a></li> 
+                <li class="hiddenmobil"><a href="#">Nosotros</a></li> 
+                <li class="hiddenmobil"><a href="contacto.html">Contacto</a></li> 
+                <!-- Botón del menú para dispositivos móviles -->
+                <li class="menu-button" onclick="showsidebar()">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Primera sección de la página -->
+    <section class="maincontainer ">
+       <div class="maincontainer-bg">
+         <!-- Contenido de la primera sección va aquí -->
+          
+         <div class="maincontainer-content p-5">
+            <h1 class="text-white">Impulsa tu marca al exito con el poder del Marketing Digital </h1>
+           
+            <p  class="text-white">Somos Boostly Marketing, especialistas en SEO, gestion de redes sociales y estragias digitales. Atrae más clientes, mejora tu visibilidad en línea y domina el mercado con nuestras soluciones personalizadas.</p>
+            
+               
+            <a href="contacto.html" class="text-lg p-3 bg-rose-700 text-center text-cyan-50 rounded-md">Solicita tu consulta gratuita</a>
+            <a href="servicios.html" class="text-lg p-3  text-center border-b-2 border-rose-700 text-cyan-50 rounded-lg">Descubre nuestras promociones</a>
+           
+        </div>
+
+        <img class="hiddenmobil" src="img_source/image2.png" width="600px" >
+        
+    </section>
+    
+    <!-- Seccion de experiencia -->
+    <section class="section p-14 pt-14 bg-slate-50 h-screen">
+        <h2 class=" text-gray-700 text-center font-semibold text-3xl text-balance mt-20">Mas de 2 años ayudando a negocios a <br>destacar en el mundo digital</h2>
+
+        <div class="sectionExp p-5">
+           
+            <div class="card">
+                <p class="text-2xl font-medium text-gray-700  text-center">Número de proyectos</p>
+                <h3 class="text-7xl font-bold  text-gray-700 "><span class="text-orange-600">+</span>100</h3>
+                <p class="text-2xl font-medium text-gray-700 text-center "> campañas de publicidad lanzadas con éxito</p>
+            </div>
+           
+            <div class="card">
+                <p class="text-2xl font-medium text-gray-700 ">Clientes satisfechos</p>
+                <h3 class="text-7xl font-bold  text-gray-700"><span class="text-orange-600">+</span>50</h3>
+                <p class="text-2xl font-medium text-gray-700 text-center">clientes que confían en nuestra experiencia y compromiso</p>
+            </div>
+            <div class="card">
+                <p class="text-2xl font-medium text-gray-700 ">Incrementamos</p>
+                <h3 class="text-7xl font-bold  text-gray-700"><span class="text-orange-600">+</span>10</h3>
+                <p class="text-2xl font-medium text-gray-700 text-center ">millones de interacciones  generadas en redes sociales.</p>
+            </div>
+           
+        </div>
+
+
+    </section>
+
+    <!-- Seccion de Empresas que confian en nosotros-->
+    <section class="section  pt-5 bg-gradient-to-b to-blue-800  from-purple-800 h-auto">
+        <h2 class=" text-white text-center font-semibold text-3xl text-balance mt-20">Clientes que confian en nosotros </h2>
+
+        <div class="sectionExp p-5">
+           
+           <img src="img_source/logo/1.png" width="150px" style="border-radius: 50%" alt="Logo Moda Femenina Minimalista Negro y Rosa"> 
+           <img src="img_source/logo/4.jpg" width="150px" style="border-radius: 50%;" alt="Crema y Café Logo de Restaurante"> 
+           <img src="img_source/logo/3.webp" width="150px" style="border-radius: 50%; " alt="Logo Simple Minimalista Restaurante"> 
+           <img src="img_source/logo/5.webp" width="150px" style="border-radius: 50%;" alt="Logo complejo de cabañas simple y lineal gris ocuro y beige"> 
+           <img src="img_source/logo/6.webp" width="150px" style="border-radius: 50%;" alt="Logotipo Cafetería Figurativo Café y Beige"> 
+           
+        </div>
+    </section>
+
+    
+    <section class="section  pt-14  h-auto bg-slate-50">
+        <h2 class="  text-gray-700 text-gr text-center font-semibold text-3xl text-balance mt-20">Soluciones digitales que transforman tu negocio</h2>
+
+        <div class="sectionExp p-5">
+           
+            <div class="card card-services">
+                <p class="text-2xl font-medium text-gray-700  text-center">Estrategias de Publicidad Digital</p>
+                <ul class="text-xl font-medium text-gray-700 text-left "> 
+                    <li>Campañas en Google Ads (búsqueda, display y YouTube).</li>
+                    <li>Publicidad en redes sociales (Facebook, Instagram, TikTok, LinkedIn, etc.).</li>
+                    <li>Retargeting para recuperar clientes potenciales..</li>
+                </ul>
+            </div>
+           
+            <div class="card card-services">
+                <p class="text-2xl font-medium text-gray-700 text-center">Gestión de Redes Sociales</p>
+                
+                <ul class="text-xl font-medium text-gray-700 text-left "> 
+                    <li>Creación y programación de contenido.</li>
+                    <li>Optimización de perfiles empresariales.</li>
+                    <li>Interacción y crecimiento de comunidades en redes.</li>
+                </ul>
+            </div>
+            <div class="card card-services">
+                <p class="text-2xl font-medium text-gray-700  text-center">Consultoría en Estrategia Digital</p>
+                
+                <ul class="text-xl font-medium text-gray-700 text-left "> 
+                    <li>Planificación de estrategias a corto y largo plazo.</li>
+                    <li>Asesoramiento personalizado para negocios en crecimiento.</li>
+                    <li>Ajustes estratégicos para maximizar resultados.</li>
+                </ul>
+            </div>
+           
+        </div>
+
+        <div class="botondeaccion">
+            
+        <a href="contacto.html" class="text-lg p-3 bg-rose-700 text-center text-cyan-50 rounded-md ">Solicita tu consulta gratuita</a>
+        <a href="servicios.html" class="text-lg p-3  text-center border-b-2 border-rose-700 text-gray-700 rounded-lg">Descubre nuestras promociones</a>
+        </div>
+    </section>
+
+
+
+    <footer class="section  pt-14   bg-slate-50">
+
+        <div class="footer">
+            <div class="card ">
+                <a href="index.html"><img src="img_source/Logodepagina/Logo4.jpg" width="200px" ></a>
+            </div>
+            <div class="card-container">
+                <div class="card ">
+                    <ul class="text-xl font-medium text-gray-700 text-left "> 
+                        <li><a href="servicios.html">Servicio</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="contacto.html"> Contacto</a></li>
+                        
+                    </ul>
+                </div>
+
+                
+            </div>
+            
+            </div>
+            
+        </div>
+
+        <h3 class="text-center"><sup>©</sup> 2024 Boostly Marketing. Todos los derechos reservados.</h3>
+       
+    </footer>
+
+    <!-- Script JavaScript para manejar la funcionalidad del menú y sidebar -->
+    <script defer src="Javascript/appJS.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+/* Establece la fuente predeterminada para el cuerpo del documento */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: rgb(48, 45, 45); /* Establece un fondo de degradado con colores rojos */
+   
+  }
+  
+  /*** Barra de navegación ***/
+  
+  /* Define el estilo general de la barra de navegación */
+  .nav-menu{
+      display: flex; /* Usa Flexbox para organizar los elementos dentro de la barra */
+      justify-content: center; /* Centra los elementos horizontalmente */
+      align-items: center; /* Centra los elementos verticalmente */
+      height: auto; /* La altura será automática según el contenido */
+      position: fixed; /* Fija la barra en la parte superior de la página */
+      width: 100%; /* La barra ocupará todo el ancho de la página */
+      top: 0%; /* Se posiciona en la parte superior de la pantalla */
+      left: 0%; /* Se posiciona en el borde izquierdo de la pantalla */
+      transition: background-color 0.5s; /* Suaviza el cambio de color de fondo */
+      z-index: 500;
+  }
+
+  .nav-menu .title{
+    position: absolute;
+    left: 30px;
+    top: -10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+  
+  /* Cambia el color de fondo de la barra de navegación cuando se hace scroll */
+  .nav-menu-scrolled{ 
+      background-color:#b009da ; /* Color de fondo al hacer scroll */
+      -webkit-box-shadow: 0px 7px 26px -14px rgba(66, 68, 90, 1);
+-moz-box-shadow: 0px 7px 26px -14px rgba(66, 68, 90, 1);
+box-shadow: 0px 7px 26px -14px rgba(66, 68, 90, 1);
+  }
+  
+  /* Cambia el color del texto en los enlaces de la barra cuando se hace scroll */
+  .nav-menu-scrolled ul li a{
+     color: rgb(255, 255, 255); /* Color amarillo para los enlaces */
+  }
+  .nav-menu-scrolled .title {
+     color: rgb(228, 228, 228); /* Color amarillo para los enlaces */
+  }
+  
+  /* Estilos para la lista de elementos dentro de la barra de navegación */
+.nav-menu ul{
+    display: flex; /* Usa Flexbox para alinear los elementos de la lista */
+    flex-direction: row; /* Los elementos estarán en fila (horizontalmente) */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 20px; /* Añade un espacio entre los elementos */
+    margin: 25px 20px; /* Márgenes alrededor de la lista */
+}
+
+  /* Estilos de los enlaces en la barra de navegación */
+
+  .nav-menu ul li a{
+      padding: 10px 20px; /* Añade espacio alrededor del texto en el enlace */
+      border-radius: 5px; /* Redondea las esquinas del enlace */
+      font-weight: 600; /* Hace el texto más grueso */
+      transition: background-color 0.4s ease 1ms; /* Suaviza el cambio de fondo al pasar el ratón */
+      color: white; /* Color blanco para el texto */
+  }
+  
+  /* Cambia el fondo y el color del texto cuando el ratón pasa sobre el enlace */
+  ul li a:hover{
+      background-color:rgb(141, 52, 201); /* Color de fondo amarillo al hacer hover */
+      color: #ffffff; /* Asegura que el texto sea blanco */
+  }
+  
+  
+  /* Oculta el botón de menú por defecto en dispositivos de escritorio */
+  .menu-button{
+      display: none;
+  }
+  
+  /* Estilos para la barra lateral (sidebar) */
+  .sidebar {
+      position: fixed; /* Fija la barra lateral en la pantalla */
+      top: 0; /* Se posiciona en la parte superior */
+      right: 0; /* Se posiciona en el borde derecho */
+      height: 100vh; /* Ocupa toda la altura de la pantalla */
+      width: 250px; /* Define el ancho de la barra lateral */
+      z-index: 1000; /* Asegura que la barra lateral esté por encima de otros elementos */
+      background: rgb(141, 52, 201); /* Color de fondo gris claro */
+      display: none; /* La barra lateral está oculta por defecto */
+      flex-direction: column; /* Organiza los elementos en columna */
+      align-items: start; /* Alinea los elementos al principio de la barra */
+      gap: 5px; /* Espacio entre los elementos */
+      justify-content: start; /* Justifica los elementos al principio */
+      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Sombra para la barra lateral */
+      padding: 10px 0; /* Añade espacio interno para separar los enlaces del borde */
+  }
+  
+  /* Estilos de los elementos de lista dentro de la barra lateral */
+  .sidebar li {
+      width: 100%; /* Los elementos ocupan todo el ancho de la barra lateral */
+  }
+  
+  /* Estilos para el primer elemento de la barra lateral */
+  .sidebar li:first-child {
+     margin: 10px; /* Añade márgenes alrededor del primer enlace */
+     width: 20%; /* Define un ancho específico para el primer elemento */
+  }
+  
+  /* Estilos para los enlaces dentro de la barra lateral */
+  .sidebar li a {
+      display: block; /* Los enlaces ocupan todo el ancho disponible */
+      padding: 10px 20px; /* Añade espacio alrededor del enlace */
+      width: 100%; /* El enlace ocupa todo el ancho del elemento de lista */
+      color: white; /* Color del texto (amarillo) */
+      text-align: start; /* Alinea el texto al principio */
+      text-decoration: none; /* Elimina el subrayado del enlace */
+      transition: background-color 0.3s; /* Suaviza el cambio de color de fondo */
+  }
+  
+  /* Cambia el fondo y el color del enlace cuando el ratón pasa sobre él */
+  .sidebar li a:hover {
+      background-color: rgb(90, 28, 131);; /* Fondo amarillo al pasar el ratón */
+      color: #ffffff; /* Texto blanco */
+  }
+  
+  /* Estilos para pantallas con un ancho máximo de 800px (móviles y tabletas) */
+  @media (max-width:800px){
+      .hiddenmobil{
+          display: none; /* Oculta los elementos con esta clase en pantallas pequeñas */
+      }
+  
+      /* Muestra el botón de menú en pantallas pequeñas */
+      .menu-button{
+          display: block; /* Muestra el botón */
+          position: relative; /* Posiciona el botón de forma relativa */
+          top: 0; /* Mantiene el botón en la parte superior */
+          z-index: 100; /* Asegura que el botón esté por encima de otros elementos */
+      }
+  
+      /* Cambia la alineación de la barra de navegación para pantallas pequeñas */
+      .nav-menu{
+          justify-content: end; /* Alinea los elementos al final */
+          align-items: center; /* Alinea los elementos al centro verticalmente */
+      }
+  }
+  
+  /* Estilos para pantallas con un ancho máximo de 400px (móviles muy pequeños) */
+  @media (max-width:400px){
+      /* Muestra la barra lateral a pantalla completa */
+      .sidebar{
+           /* Muestra la barra lateral */
+          width: 100%; /* Ocupa todo el ancho de la pantalla */
+      }
+  }
+  
+  /*** Hero section ***/
+  
+  /* Define la altura de la sección principal (Hero Section) */
+  .maincontainer{
+      height: 100vh; 
+  }
+
+
+  .maincontainer-bg{
+    background: linear-gradient(220.55deg, #FF3F3F 0%, #063CFF 100%);
+    padding-top:100px ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .maincontainer-content{
+    max-width: 500px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 40px;
+  }
+
+  @media(max-width:960px){
+    
+    .maincontainer-bg img{
+      display: none;
+    }
+    
+    .maincontainer-content{
+        align-items: center;
+        
+    }
+  }
+
+  .maincontainer-content h1{
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .maincontainer-content h2{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .maincontainer-content a{
+    width: 20rem;
+  }
+
+  /********** Sections Experience************/
+  
+  .section{
+    padding: 20px;
+  }
+
+  .sectionExp{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @media(max-width: 800px){
+   
+    .section{
+      height: auto;
+    }
+
+    .sectionExp{
+      flex-direction: column;
+      gap: 100px;
+    }
+    
+  }
+
+  @media(max-width: 850px){
+    .sectionExp{
+      flex-direction: column;
+      gap: 100px;
+    }
+    
+  }
+
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /** Empresas que confian en nosotros**/
+
+  .sectionExp img{
+    transition: transform 0.2s ease-out;
+    
+  }
+
+  .sectionExp img:hover{
+    transform: scale(1.2);
+    
+  }
+
+  /** Servicios **/
+
+  .card-services{
+      transition: all 0.4s ease;
+      border: 1px solid #41434727;
+      border-radius: 10px;
+      padding: 30px;
+      width: 22rem;
+      height: 25rem;
+     
+    }
+
+  .card-services:hover{
+    border: 3px solid #6606ff;
+    transform: scale(1.1);
+   
+  }
+
+  .card-services ul{
+   list-style:disc;
+  }
+
+  .card-services ul li{
+    margin: 10px;
+  }
+
+  .botondeaccion{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /** Footer section*/
+
+  .footer{
+    border-top: 1px solid rgba(91, 86, 95, 0.171) ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    height: 200px;
+  }
+
+  .card ul li {
+   list-style: disc;
+  }
+
+  .card ul li a{
+    color: black;
+  }
+
+  .card ul li a:hover{
+    color: rgb(168, 17, 255);
+    background-color: transparent;
+  }
+  
